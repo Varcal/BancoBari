@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  sqlserver:
+    container_name: 'vs_mssql'
+    image: mcr.microsoft.com/mssql/server:2017-CU20-ubuntu-18.04
+    restart: always
+    environment: 
+      accept_eula: "y"
+      sa_password: "admin@123"
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./mssql:/var/opt/mssql
+    networks: 
+      - varcalsys-network
+   
+  rabbitmq:
+    container_name: 'vs_rabbitmq'
+    image: rabbitmq:3-management
+    hostname: varcalsys
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+      - "25676:25676"
+    volumes:
+      - ./rabbitmq:/var/lib/rabbitmq/mnesia
+    networks: 
+      - varcalsys-network
+
+networks: 
+  varcalsys-network:
+    driver: bridge

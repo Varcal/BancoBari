@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.Extensions.Hosting" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BancoBari.Domain\BancoBari.Domain.csproj" />
+    <ProjectReference Include="..\BancoBari.Infra.CrossCutting\BancoBari.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\BancoBari.Services\BancoBari.Services.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -3,7 +3,7 @@ version: '3.4'
 services:
   sqlserver:
     container_name: 'vs_mssql'
-    image: mcr.microsoft.com/mssql/server:2017-CU20-ubuntu-18.04
+    image: mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
     restart: always
     environment: 
       accept_eula: "y"

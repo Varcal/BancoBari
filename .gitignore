@@ -168,7 +168,8 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
-server/
+mssql/
+rabbitmq
 
 # Publish Web Output
 *.[Pp]ublish.xml

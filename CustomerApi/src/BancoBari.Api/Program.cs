@@ -16,7 +16,7 @@ namespace BancoBari.Api
             Host.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
-                    config.AddEnvironmentVariables(prefix:"API_");
+                    config.AddEnvironmentVariables();
                 })
                 .ConfigureLogging(logging =>
                 {
